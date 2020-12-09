@@ -1,5 +1,5 @@
 #include "memento.hpp"
-#include <iostream>
+
 Memento::~Memento() {}
 
 DelMemento::DelMemento(std::map<int, std::string> &Jmap, const jEntry &entry) : Jmap(Jmap), entry(entry) {}
