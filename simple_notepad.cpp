@@ -4,19 +4,6 @@
 
 #include "journal.hpp"
 #include "persistance_manager.hpp"
-/*
-
-class JournalManager
-{
-    std::shared_ptr<Journal> jornal;
-    DoUndo modifier;
-    void save(const std::string &f);
-    void load(const std::string &f);
-
-    void add(std::string entry);
-    void remove(int id);
-};
-/**/
 
 int main()
 {
@@ -32,13 +19,7 @@ int main()
     j->addEntry("3", 150);
     
     j->undo();
+    j->redo();
     PersistenceManager::saveJournal(j, "out.txt");
-    /*std::string rule;
-    while(std::cin>>rule){
-        std::cout<<rule<<"\n";
-        if(rule=="exit")break;
-    }
-    
-    std::shared_ptr<Journal> j1 = PersistenceManager::loadJournal("out.txt");
-    PersistenceManager::saveJournal(j1, "works.txt");*/
+
 }
